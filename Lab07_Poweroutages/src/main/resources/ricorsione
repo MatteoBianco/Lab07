@@ -1,0 +1,19 @@
+- il livello rappresenta il l'evento blackout n-esimo inserito/non inserito
+- una soluzione parziale è fatta di un certo numero di eventi blackout 
+- una soluzione parziale è completa se ho raggiunto il numero massimo di ore di blackout segnalate
+  o se ho aggiunto tutti gli eventi blackout nel range di anni segnalato, o se ho 
+  controllato tutti gli eventi possibili
+- una soluzione parziale è valida se il numero totale di ore di blackout non supera il numero
+  massimo segnalato, e se gli eventi registrati sono avvenuti nel range di anni segnalato
+- per generare tutte le soluzioni del livello +1 a partire da una soluzione parziale del livello
+  corrente, provo ad aggiungere/non aggiungere l'evento L
+- la struttura dati per memorizzare la soluzione può essere una List (ordinata) o un Set (non ordinato)
+- per memorizzare lo stato della ricerca, ho bisogno di una List parziale, del livello, degli
+  eventi ancora disponibili e del numero di ore già aggiunte
+
+A. ore totali = Y; range anni = X;
+B. aggiungo un evento 
+C. filtro per salvare la soluzione "migliore", solo se coinvolge un numero maggiore di clienti 
+   rispetto al caso peggiore rilevato finora
+D. rimuovo l'evento aggiunto prima di lanciare la ricorsione
+E. // 
